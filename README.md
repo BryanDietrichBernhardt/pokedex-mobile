@@ -1,6 +1,8 @@
-# pokedex_mobile
+# Pokedex Mobile
 
-A new Flutter project.
+A Pokedex app developed using Flutter.
+
+<img src="/assets/images/Screenshot_1678624129.png">
 
 ## Getting Started
 

@@ -18,6 +18,13 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
+              const Text(
+                "PodeDex Mobile",
+                style: TextStyle(
+                    fontFamily: 'Pokemon Solid',
+                    fontSize: 42,
+                    color: Colors.red),
+              ),
               Image.asset("assets/images/pokedex-icon-28.jpg"),
               ElevatedButton(
                 onPressed: () {

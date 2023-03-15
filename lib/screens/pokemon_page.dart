@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
 class PokemonPageArgs {
-  final name;
-  final link;
+  final String name;
 
-  PokemonPageArgs(this.name, this.link);
+  PokemonPageArgs(this.name);
 }
 
 class PokemonPage extends StatefulWidget {
@@ -28,7 +27,7 @@ class _PokemonPageState extends State<PokemonPage> {
       ),
       body: Column(
         children: [
-          Text(arguments.link),
+          Text(arguments.name),
         ],
       ),
     );

@@ -1,28 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
+import 'package:pokedex_mobile/data/poke_api.dart';
 import 'package:pokedex_mobile/screens/pokemon_page.dart';
-import 'dart:convert';
-import '../models/pokedex.dart';
-
-Future<List<dynamic>> getPokemons() async {
-  Uri uri = Uri.https(
-      'pokeapi.co', '/api/v2/pokemon', {'limit': '20', 'offset': '0'});
-  List<String> pokemonsNames = [];
-  final response = await http.get(uri);
-  Map<String, dynamic> data = json.decode(response.body);
-
-  if (response.statusCode == 200) {
-    Pokemons pokemonsList = Pokemons(data['results']);
-    for (var element in pokemonsList.pokemons) {
-      Pokemon pokemon = Pokemon.fromJson(element);
-      print(pokemon.name);
-      pokemonsNames.add(pokemon.name);
-    }
-  } else {
-    print('Error.');
-  }
-  return pokemonsNames;
-}
 
 class PokemonsPage extends StatefulWidget {
   const PokemonsPage({super.key});
@@ -64,7 +42,7 @@ class _PokemonsPageState extends State<PokemonsPage> {
                         Navigator.pushNamed(
                           _,
                           'pokemon',
-                          arguments: PokemonPageArgs(pokemons[i], pokemons[i]),
+                          arguments: PokemonPageArgs(pokemons[i]),
                         );
                       },
                       child: Card(

@@ -1,6 +1,7 @@
 # Pokedex Mobile
 
-A Pokedex app developed using Flutter.
+A Pokedex app developed using Flutter.<br>
+Note: In this project I used a custom architecture for organizing files, bringing together some well-known organizations for better adaptation to the project.
 
 <div>
   <img src="/assets/images/Screenshot_1678624129.png" height="550">

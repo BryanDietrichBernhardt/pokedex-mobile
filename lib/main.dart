@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'home_page.dart';
-import 'pokemons_page.dart';
+import 'package:pokedex_mobile/screens/pokemon_page.dart';
+import 'screens/home_page.dart';
+import 'screens/pokemons_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,11 +17,15 @@ class MyApp extends StatelessWidget {
       title: 'Pokedex Mobile',
       theme: ThemeData(
         primarySwatch: Colors.red,
+        appBarTheme: const AppBarTheme(
+          elevation: 0,
+        ),
       ),
       initialRoute: '/',
       routes: {
         '/': (context) => HomePage(title: "Pokedex Mobile"),
         'pokemons': (context) => PokemonsPage(),
+        PokemonPage.routeName: (context) => PokemonPage(),
       },
     );
   }

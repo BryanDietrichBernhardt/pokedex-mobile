@@ -3,6 +3,8 @@
 A Pokedex app developed using Flutter.
 
 <img src="/assets/images/Screenshot_1678624129.png" height="550">
+<img src="/assets/images/Screenshot_1678890889.png" height="550">
+<img src="/assets/images/Screenshot_1678890983.png" height="550">
 
 ## Getting Started
 

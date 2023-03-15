@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokedex_mobile/models/extensions/captalize.dart';
 
 class PokemonPageArgs {
   final String name;
@@ -23,12 +24,17 @@ class _PokemonPageState extends State<PokemonPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(arguments.name),
+        title: Text(arguments.name.capitalize()),
       ),
-      body: Column(
-        children: [
-          Text(arguments.name),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          children: [
+            Text(
+              "Trazer dados de API + /nome:\npokeapi.co/api/v2/pokemon/${arguments.name}",
+            ),
+          ],
+        ),
       ),
     );
   }

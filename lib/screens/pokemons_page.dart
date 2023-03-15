@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pokedex_mobile/data/poke_api.dart';
+import 'package:pokedex_mobile/models/extensions/captalize.dart';
 import 'package:pokedex_mobile/screens/pokemon_page.dart';
 
 class PokemonsPage extends StatefulWidget {
@@ -48,7 +49,7 @@ class _PokemonsPageState extends State<PokemonsPage> {
                       child: Card(
                         child: Padding(
                           padding: EdgeInsets.all(20.0),
-                          child: Text(pokemons[i]),
+                          child: Text(pokemons[i].toString().capitalize()),
                         ),
                       ),
                     );
